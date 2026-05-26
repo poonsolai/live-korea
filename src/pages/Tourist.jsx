@@ -16,7 +16,7 @@ import kimg1 from "../assets/homepage-image/south-korea.png"; // defalut image i
 import travel from "../assets/travel.jpg"; // image for travel tip section
 import seoul from "../assets/Seoul.jpg"; // image for itinerary section
 import busan from "../assets/Busan.jpg"; // image for itinerary section
-import jeju from "../assets/Jeju.jpg"; // image for itinerary section
+import jeju from "../assets/jeju.jpg"; // image for itinerary section
 import lux from "../assets/lux.jpg"; // image for itinerary section
 import fulexp from "../assets/homepage-image/korea5.jpg"; // image for itinerary section
 import Loading from "../components/Loading"; //loading component
