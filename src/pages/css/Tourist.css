@@ -1,0 +1,280 @@
+/* Tourist.css */
+.tourist-page {
+    background-color: #f4f7fa;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.header-section {
+    padding: 20px;
+    background: #fff;
+}
+
+.back-btn { cursor: pointer; font-weight: 600; color: #333; }
+
+.explore-title { font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-top: 15px; }
+
+.search-container {
+    background: #f1f3f6;
+    border-radius: 20px;
+    padding: 15px 25px;
+    margin: 20px 0;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+/* Card Styling to match image exactly */
+.place-card {
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: 0.3s;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+.place-card:hover{
+    transform: translateY(-5px);
+    border-color: #03feed !important;
+}
+.img-container {
+    position: relative;
+    height: 200px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-content { padding: 18px; }
+
+.rating-tag { color: #ff9800; font-weight: bold; font-size: 0.9rem; }
+
+.type-tag {
+    float: right;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    background-color: rgb(238, 221, 223);
+    
+}
+
+/* Color tags as per original image */
+.type-History { color: #6b7280; }
+.type-Landmark { color: #3b82f6; }
+.type-Culture { color: #f59e0b; }
+.type-Nature { color: #10b981; }
+.type-Entertainment { color: #f50bde; }
+.type-Shopping { color: #2f10b9; }
+
+.itinerary-section { padding: 25px 20px; }
+.plan-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+.type-box{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.travel-tip-box {
+    background-color: #fff9eb; /* Light yellowish background like in image */
+    border-radius: 20px;
+    padding: 5px 20px;
+    border: 1px solid #ffecb3;
+}
+
+.tip-icon {
+    background: #ffcc00;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+.tip-content h6 {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.tip-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.tip-image img {
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+/* For mobile responsive */
+@media (max-width: 576px) {
+    .travel-tip-box {
+        padding: 12px;
+    }
+}
+
+
+/* Recommended Itineraries Styling */
+.itinerary-card-main {
+    background: #fff;
+    min-width: 280px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #f0f0f0 !important;
+}
+
+
+.itinerary-card-main:hover {
+    transform: translateY(-3px);
+    border-color: #080ab8 !important;
+}
+
+.itinerary-img-box {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.itinerary-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itinerary-info h6 {
+    line-height: 1.3;
+    color: #333;
+}
+
+
+
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* detail box */
+.detail-box {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 100px;
+  background: #dcdcdc;
+  border-radius: 20px;
+  padding: 25px;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+/* close button */
+.close-btn {
+  position: fixed;
+  top: 10px;
+  right: 43px;
+  border: none;
+  background: transparent;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+/* main layout */
+.detail-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+/* left */
+.left-sec {
+  flex: 1;
+}
+
+
+
+/* image */
+.right-sec {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  height: 600px;
+}
+
+.right-sec img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* table */
+table {
+  width: 100%;
+}
+th{
+    background-color: pink;
+}
+th,
+td {
+  padding: 8px;
+  border: 1px solid rgb(10, 28, 27);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .detail-content {
+    flex-direction: column;
+  }
+  .right-sec {
+    display: none;
+  }
+  
+
+  .title {
+    font-size: 40px;
+  }
+
+}
+body.popup-open{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+

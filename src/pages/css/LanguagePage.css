@@ -1,0 +1,168 @@
+body {
+  background: #f5f6fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FULL WIDTH */
+.language-page {
+  width: 100%;
+  padding: 15px;
+}
+
+/* HEADER */
+.hero-header {
+  background: #f8f9fc;
+  border-radius: 16px;
+}
+
+.back-link {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header-title {
+  font-weight: 600;
+}
+
+.hero-img {
+  width: 120px;
+}
+
+/* SEARCH */
+.search-box {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f1f3f6;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+}
+
+/* CATEGORY */
+.category-wrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.category-container {
+  display: flex;
+  gap: 10px;
+}
+
+.category-btn {
+  background: #f1f3f6;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.category-btn.active {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* CARD */
+.phrase-card {
+  margin-top: 12px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phrase-left {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  background: #eef0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-btn:hover{
+  color: red;
+}
+.icon-btn:active{
+  color: palevioletred;
+}
+.star {
+  color: #ccc;
+}
+
+.star.active {
+  color: #0e03e0;
+}
+
+/* TIPS */
+.tips-box {
+  margin-top: 20px;
+  background: #eef0ff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.phrase-actions{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .language-page {
+    padding: 25px 40px;
+  }
+
+  .hero-img {
+    width: 140px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 992px) {
+  .language-page {
+    padding: 30px 80px;
+  }
+
+  .category-container {
+    justify-content: start;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .language-page {
+    padding: 40px 120px;
+  }
+}
+.view{
+  cursor: pointer;
+  font-size: 18px;
+}

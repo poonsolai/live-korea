@@ -1,0 +1,235 @@
+.food-page-main {
+  font-family: "Inter", sans-serif;
+}
+.small-text {
+  font-size: 11px;
+}
+.section-title {
+  font-size: 24px;
+  color: #c87272;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Header */
+.nav-btn {
+  width: 38px;
+  height: 38px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #e7f5ea 0%, #a4d8ae 100%);
+  border: none;
+}
+.banner-title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.small-badge {
+  font-size: 10px;
+}
+.explore-btn {
+  font-size: 12px;
+}
+.hero-decoration {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+/* Smart Arrows */
+.category-nav-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.smart-arrow {
+  position: absolute;
+  background: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #198754;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+}
+.smart-arrow.left {
+  left: -5px;
+}
+.smart-arrow.right {
+  right: -5px;
+}
+
+/* Category Items */
+.cat-circle-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.category-name {
+  font-size: 10px;
+  margin-top: 4px;
+}
+.ring-active {
+  outline: 2px solid #198754;
+  outline-offset: 3px;
+}
+
+/* Popular Dishes */
+.dish-img-fixed {
+  height: 100px;
+  object-fit: cover;
+}
+.dish-card-custom {
+  border: 1px solid #f9f9f9;
+  transition: transform 0.2s;
+}
+.dish-card-custom:hover {
+  transform: translateY(-5px);
+}
+.dish-name {
+  font-size: 15px;
+  color: rgba(255, 166, 0, 0.534);
+}
+.dish-desc {
+  font-size: 10px;
+  color: #777;
+}
+.dish-rating {
+  font-size: 11px;
+}
+.like-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Nearby Restaurants */
+.rest-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.rest-name {
+  font-size: 14px;
+}
+.rest-type,
+.rest-meta {
+  font-size: 11px;
+}
+.rest-time {
+  font-size: 10px;
+}
+.direction-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Colors */
+.tip-box-custom {
+  background-color: #eaf7ed;
+  border: 1px solid #d4edda;
+}
+.bg-success-subtle {
+  background-color: #eaf7ed !important;
+}
+.bg-danger-subtle {
+  background-color: #fcebeb !important;
+}
+.bg-warning-subtle {
+  background-color: #fef7e6 !important;
+}
+.bg-primary-subtle {
+  background-color: #e9f0fe !important;
+}
+.bg-info-subtle {
+  background-color: #e0f7fa !important;
+  text-decoration: line-through;
+}
+
+/* Desktop Adjustment */
+@media (min-width: 768px) {
+  .dish-img-fixed {
+    height: 160px;
+  }
+  .cat-circle-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .banner-title {
+    font-size: 2.5rem;
+  }
+}
+
+.small:hover{
+  cursor: pointer;
+}
+.res-box{
+  border: 1px solid gray;
+  padding: 2px;
+}
+.filter-tool-box{
+  background-color: rgb(245, 114, 0);
+  color: white;
+  height: 100px;
+  width: 150px;
+  position: absolute;
+  right: 1px;
+  bottom: 35px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+
+}
+
+.type{
+  color: #9d09ec;
+  background-color: gainsboro;
+  padding: 1px 5px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+.type-1{
+  color: #323124;
+  background-color: rgb(231, 135, 135);
+  padding: 1px 5px;
+  letter-spacing: 2px;
+}

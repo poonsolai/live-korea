@@ -1,0 +1,372 @@
+[
+  {
+    "packageId": 1,
+    "packageName": "🗓️ Seoul Quick Trip",
+    "duration": "4 Days / 3 Nights",
+    "budgetRangeINR": "💸 Approx Budget : ₹70,000 – ₹1,00,000",
+    "bestFor": [
+      "First International Trip",
+      "Students",
+      "K-Drama Fans"
+    ],
+    "exp":"Shopping + street food + night life + Metro travel easy",
+    "img":"seoul",
+    "cities": [
+      "Seoul"
+    ],
+    "places": [
+      {
+        "day": 1,
+        "places": [
+          "Gyeongbokgung Palace +",
+          " Bukchon Hanok Village +",
+          " Insadong Street"
+        ]
+      },
+      {
+        "day": 2,
+        "places": [
+          "N Seoul Tower +",
+          " Myeongdong Shopping Street + ",
+          " Hongdae Night Street"
+        ]
+      },
+      {
+        "day": 3,
+        "places": [
+          "Lotte World +",
+          " Han River Park +",
+          " Dongdaemun Design Plaza"
+        ]
+      },
+      {
+        "day": 4,
+        "places": [
+          "Starfield Library +",
+          " COEX Mall"
+        ]
+      }
+    ],
+    "expenseBreakdown": {
+      "Flight": "₹35,000 - ₹50,000",
+      "Hotel": "₹12,000 - ₹20,000",
+      "Food": "₹6,000 - ₹10,000",
+      "Transport": "₹3,000 - ₹5,000",
+      "Shopping": "₹5,000 - ₹10,000",
+      "Activities": "₹5,000 - ₹8,000"
+    }
+  },
+  {
+    "packageId": 2,
+    "packageName": "🗓️ Seoul + Busan Combo",
+    "duration": "7 Days / 6 Nights",
+    "budgetRangeINR": "💸 Approx Budget : ₹1.2L – ₹1.8L",
+    "bestFor": [
+      "Friends Trip",
+      "Couples",
+      "Beach Lovers"
+    ],
+    "exp":"City + Beach + Temples + KTX bullet train experience",
+    "img":"busan",
+    "cities": [
+      "Seoul +",
+      " Busan"
+    ],
+    "places": [
+      {
+        "day": 1,
+        "places": [
+          "Gyeongbokgung Palace",
+          "Myeongdong"
+        ]
+      },
+      {
+        "day": 2,
+        "places": [
+          "Hongdae",
+          "N Seoul Tower"
+        ]
+      },
+      {
+        "day": 3,
+        "places": [
+          "KTX Train Experience",
+          "Busan Arrival"
+        ]
+      },
+      {
+        "day": 4,
+        "places": [
+          "Haeundae Beach",
+          "Gwangalli Beach"
+        ]
+      },
+      {
+        "day": 5,
+        "places": [
+          "Gamcheon Culture Village",
+          "Jagalchi Fish Market"
+        ]
+      },
+      {
+        "day": 6,
+        "places": [
+          "Busan Sky Capsule",
+          "Songdo Cable Car"
+        ]
+      },
+      {
+        "day": 7,
+        "places": [
+          "Return to Seoul / Airport"
+        ]
+      }
+    ],
+    "expenseBreakdown": {
+      "Flight": "₹40,000 - ₹55,000",
+      "Hotel": "₹25,000 - ₹40,000",
+      "Food": "₹10,000 - ₹18,000",
+      "Transport": "₹8,000 - ₹12,000",
+      "Activities": "₹8,000 - ₹15,000",
+      "Shopping": "₹10,000 - ₹25,000"
+    }
+  },
+  {
+    "packageId": 3,
+    "packageName": "🌳 Seoul + Jeju Nature ",
+    "duration": "6 Days / 5 Nights",
+    "budgetRangeINR": "💸 Approx Budget : ₹1.3L – ₹2L",
+    "bestFor": [
+      "Nature Lovers",
+      "Honeymoon",
+      "Relax Trip"
+    ],
+    "cities": [
+      "Seoul +",
+      " Jeju Island"
+    ],
+    "exp":"Historical places + Beaches + City life + Food exploration + Long vacation"    ,
+    "img":"jeju",
+    "places": [
+      {
+        "day": 1,
+        "places": [
+          "Myeongdong +",
+          " N Seoul Tower"
+        ]
+      },
+      {
+        "day": 2,
+        "places": [
+          "Gyeongbokgung Palace +",
+          " Han River"
+        ]
+      },
+      {
+        "day": 3,
+        "places": [
+          "Flight to Jeju + ",
+          " Seongsan Ilchulbong"
+        ]
+      },
+      {
+        "day": 4,
+        "places": [
+          "Hallasan National Park +",
+          " Jeju Beaches"
+        ]
+      },
+      {
+        "day": 5,
+        "places": [
+          "Cheonjiyeon Waterfall +",
+          " Jeju Teddy Bear Museum"
+        ]
+      },
+      {
+        "day": 6,
+        "places": [
+          "Return Flight"
+        ]
+      }
+    ],
+    "expenseBreakdown": {
+      "Flight": "₹48,000 - ₹75,000",
+      "Hotel": "₹20,000 - ₹35,000",
+      "Food": "₹10,000 - ₹15,000",
+      "Transport": "₹5,000 - ₹8,000",
+      "Shopping" :"₹10,000 - ₹25,000",
+      "Activities": "₹10,000 - ₹20,000"
+    }
+  },
+  {
+    "packageId": 4,
+    "packageName": "🎆 Full Korea Explorer",
+    "duration": "10-12 Days",
+    "budgetRangeINR": "💸 Approx Budget : ₹2L – ₹3.2L",
+    "bestFor": [
+      "Long Vacation",
+      "Vloggers",
+      "Complete Korea Tour"
+    ],
+    "exp":"Nature + beaches + peaceful trip + Viewpoints + Domestic flight needed",
+    "img":"fulexp",
+    "cities": [
+      "Seoul +",
+      " Busan +",
+      " Jeju +",
+      " Gyeongju +",
+      "Incheon"
+    ],
+    "places": [
+      {
+        "day": 1,
+        "places": [
+          "Seoul Palace Tour"
+        ]
+      },
+      {
+        "day": 2,
+        "places": [
+          "Myeongdong +",
+          " Hongdae"
+        ]
+      },
+      {
+        "day": 3,
+        "places": [
+          "DMZ Tour"
+        ]
+      },
+      {
+        "day": 4,
+        "places": [
+          "KTX to Busan"
+        ]
+      },
+      {
+        "day": 5,
+        "places": [
+          "Haeundae Beach + ",
+          " Gamcheon Village"
+        ]
+      },
+      {
+        "day": 6,
+        "places": [
+          "Gyeongju Historical Tour"
+        ]
+      },
+      {
+        "day": 7,
+        "places": [
+          "Flight to Jeju"
+        ]
+      },
+      {
+        "day": 8,
+        "places": [
+          "Hallasan + ",
+          " Jeju Nature Tour"
+        ]
+      },
+      {
+        "day": 9,
+        "places": [
+          "Incheon Chinatown"
+        ]
+      },
+      {
+        "day": 10,
+        "places": [
+          "Shopping & Return"
+        ]
+      }
+    ],
+    "expenseBreakdown": {
+      "Flight": "₹55,000 - ₹75,000",
+      "Hotel": "₹45,000 - ₹70,000",
+      "Food": "₹18,000 - ₹30,000",
+      "Transport": "₹15,000 - ₹25,000",
+      "Activities": "₹20,000 - ₹35,000",
+      "Shopping": "₹20,000 - ₹50,000"
+    }
+  },
+  {
+    "packageId": 5,
+    "packageName": "💎Luxury Korea Trip",
+    "duration": "8-10 Days",
+    "budgetRangeINR": "💸 Approx Budget : ₹4L – ₹8L+",
+    "img":"lux",
+    "exp":"Private transport + Premium shopping + Cruise + Luxury cafes + Premium experiences",
+    "bestFor": [
+      "Luxury Family",
+      "Premium Honeymoon",
+      "VIP Travel"
+    ],
+    "cities": [
+      "Seoul +",
+      " Busan +",
+      " Jeju"
+    ],
+    "places": [
+      {
+        "day": 1,
+        "places": [
+          "Luxury Seoul Hotel Stay"
+        ]
+      },
+      {
+        "day": 2,
+        "places": [
+          "Private Seoul City Tour"
+        ]
+      },
+      {
+        "day": 3,
+        "places": [
+          "Luxury Shopping + ",
+          " Gangnam Tour"
+        ]
+      },
+      {
+        "day": 4,
+        "places": [
+          "Business Class KTX to Busan"
+        ]
+      },
+      {
+        "day": 5,
+        "places": [
+          "Private Yacht Experience"
+        ]
+      },
+      {
+        "day": 6,
+        "places": [
+          "Jeju Premium Resort"
+        ]
+      },
+      {
+        "day": 7,
+        "places": [
+          "Private Nature Tour"
+        ]
+      },
+      {
+        "day": 8,
+        "places": [
+          "Return"
+        ]
+      }
+    ],
+    "expenseBreakdown": {
+      "Flight": "₹1L - ₹2L",
+      "Hotel": "₹1.2L - ₹3L",
+      "Food": "₹30,000 - ₹60,000",
+      "Transport": "₹25,000 - ₹60,000",
+      "Activities": "₹50,000 - ₹1.5L",
+      "Shopping": "₹50,000+"
+    }
+  }
+]

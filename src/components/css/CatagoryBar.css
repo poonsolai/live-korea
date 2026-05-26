@@ -1,0 +1,54 @@
+.category-header-row {
+  position: relative;
+}
+
+.category-main-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* desktop ku wrap ok */
+}
+
+.category-item-btn {
+  padding: 6px 12px;
+  background: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.category-item-btn.active {
+  background: rgb(19, 193, 232);
+  color: white;
+}
+
+/* 📱 arrow right side */
+.arrow-wrapper {
+  position: relative;
+  margin-left: auto;
+}
+
+/* dropdown */
+.floating-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.menu-row {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.menu-row:hover {
+  background: #f5f5f5;
+}

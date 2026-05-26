@@ -1,0 +1,188 @@
+.voltage-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.voltage-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+.voltage-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.header-icon {
+  width: 60px;
+  height: 60px;
+  background: #f3f0ff;
+  color: #6c4df6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 24px;
+}
+
+.voltage-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.voltage-header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Select */
+
+.country-select-box {
+  margin-bottom: 25px;
+}
+
+.country-select-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.country-select-box select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+  background: #fafafa;
+}
+
+/* Grid */
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Cards */
+
+.detail-card {
+  background: #f9f9f9;
+  border-radius: 18px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.detail-card:hover {
+  transform: translateY(-4px);
+}
+
+.detail-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.detail-card h4 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.detail-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Plug Badge */
+
+.plug-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.plug-badge {
+  background: #ece8ff;
+  color: #6c4df6;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Alert */
+
+.adapter-box {
+  margin-top: 25px;
+  padding: 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.warning {
+  background: #fff4e5;
+  color: #e28a00;
+}
+
+.safe {
+  background: #eafaf1;
+  color: #14a44d;
+}
+
+/* Colors */
+
+.yellow {
+  color: #f4b400;
+}
+
+.blue {
+  color: #4285f4;
+}
+
+.purple {
+  color: #7b61ff;
+}
+
+.green {
+  color: #14a44d;
+}
+
+.red {
+  color: #ea4335;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voltage-card {
+    padding: 18px;
+  }
+
+  .voltage-header h2 {
+    font-size: 20px;
+  }
+
+  .header-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

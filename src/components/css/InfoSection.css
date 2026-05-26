@@ -1,0 +1,53 @@
+.info-row {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.info-box {
+  background: #fffcfc; /* Very light background */
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  border: 1px solid #f8f9fa;
+}
+
+.info-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Colors from Image */
+.bg-cyan { background: #e3fafc; color: #15aabf; }
+.bg-pink { background: #fff0f6; color: #e64980; }
+.bg-blue { background: #e7f5ff; color: #228be6; }
+.bg-gold { background: #fff9db; color: #fab005; }
+
+.info-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.info-text {
+  font-size: 0.65rem;
+  color: #868e96;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .info-box { padding: 8px; }
+  .info-title { font-size: 0.75rem; }
+}

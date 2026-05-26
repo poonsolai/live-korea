@@ -1,0 +1,383 @@
+/* css/Checklist.css */
+
+.checklist-page {
+  background: #f8f8fc;
+  min-height: 100vh;
+  padding: 20px;
+  padding-bottom: 120px;
+  padding-top: 0px;
+  font-family: sans-serif;
+}
+
+/* HERO */
+#heading{
+  font-size: 60px;
+  font-weight: 800;
+  color: #101b4d;
+}
+.note-card {
+  background: #fff3c8;
+  padding: 15px;
+  border-radius: 15px;
+  width: 180px;
+  font-weight: 600;
+  transform: rotate(-3deg);
+  text-align: center;
+}
+
+
+/* CARD */
+
+.card-box {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+
+/* PROGRESS */
+
+.progress-top {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.circle-progress {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: 0.4s;
+}
+
+.circle-inner {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner span {
+  font-size: 14px;
+  color: gray;
+}
+
+.circle-inner h3 {
+  margin: 0;
+  color: #6c4dff;
+  font-weight: bold;
+}
+
+.progress-details {
+  flex: 1;
+}
+
+.progress-bar {
+  background: #6c4dff;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.progress-info h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* SECTION */
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-title span {
+  background: #ece7ff;
+  color: #6c4dff;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* CHECK ITEMS */
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.check-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked {
+  background: #28c76f;
+  border: none;
+  color: white;
+}
+.proc{
+  background: #ecd20b;
+  border: none;
+  color: white;
+}
+.check-icon {
+  width: 50px;
+  height: 50px;
+  background: #f3f0ff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c4dff;
+  font-size: 20px;
+}
+
+.check-content {
+  flex: 1;
+}
+
+.check-content h5 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.check-content p {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.completed {
+  background: #dff8ea;
+  color: #28a745;
+}
+
+.process {
+  background: #ece7ff;
+  color: #6c4dff;
+}
+
+.pending {
+  background: #f3f3f3;
+  color: gray;
+}
+
+/* PACK */
+
+.pack-card {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid #eee;
+}
+
+.pack-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.mini-progress {
+  height: 7px;
+  background: #ececec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mini-progress-fill {
+  height: 100%;
+}
+
+/* SHARE */
+
+.share-card {
+  background: #ece7ff;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-btn {
+  border: none;
+  background: #6c4dff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+/* TIPS */
+
+.tips-img {
+  font-size: 60px;
+  text-align: center;
+}
+
+.tips-text {
+  color: gray;
+  text-align: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.active-dot {
+  background: #6c4dff !important;
+}
+
+/* SAVED */
+
+.saved-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.saved-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.saved-item .im {
+  width: 70px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.saved-item h6 {
+  margin: 0;
+}
+
+.saved-item p {
+  margin: 0;
+  color: gray;
+}
+
+.view-btn {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f4f4ff;
+  color: #6c4dff;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .progress-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .share-card {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .check-item {
+    flex-wrap: wrap;
+  }
+
+  .status-badge {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .checklist-page {
+    padding: 12px;
+  }
+
+  .hero-section {
+    padding: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .note-card {
+    width: 100%;
+  }
+
+  .circle-progress {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-inner {
+    width: 90px;
+    height: 90px;
+  }
+
+  .bottom-nav span {
+    font-size: 11px;
+  }
+}
+
+.save-btn{
+   border: none;
+   background: transparent;
+   font-size: 18px;
+   cursor: pointer;
+   color: #7c4dff;
+}
+
+.save-btn:hover{
+   transform: scale(1.1);
+}
