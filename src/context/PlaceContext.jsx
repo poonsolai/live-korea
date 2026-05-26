@@ -82,7 +82,7 @@ export const PlaceProvider = ({ children }) => {
 
     try {
       // BACKEND API CALL
-      const res = await axios.get(`${API}/tourist`);
+      const res = await axios.get(`${API}/api/tourist`);
 
       // TOURIST ARRAY
       const touristData = res.data.tourist;

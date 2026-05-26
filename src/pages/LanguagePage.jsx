@@ -25,7 +25,7 @@ const LanguagePage = () => {
   const [num, setNum] = useState(5);
   // fetch phrases from database
   async function PhraseDataCollecter() {
-    const res = await axios.get(`${API}/phrases`, {
+    const res = await axios.get(`${API}/api/phrases`, {
       withCredentials: true,
     });
     setPhrase(res.data.phrases);
@@ -53,7 +53,7 @@ const LanguagePage = () => {
   };
   // store a fav parses
   const toggleFav = async (item) => {
-    const res = await axios.patch(`${API}/favorite`,{id:item._id});
+    const res = await axios.patch(`${API}/api/favorite`,{id:item._id});
     PhraseDataCollecter();
   };
 

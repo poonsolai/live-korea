@@ -97,7 +97,7 @@ const CheckList = () => {
   const [view, setView] = useState(5);
 
   async function fetchData() {
-    let res = await axios.get(`${API}/checklist`);
+    let res = await axios.get(`${API}/api/checklist`);
     setChecklist(res.data.checklist);
   }
   // call one time
@@ -168,7 +168,7 @@ const CheckList = () => {
         }
       }
       const response = await axios.patch(
-        `${API}/status/${item._id}`,
+        `${API}/api/status/${item._id}`,
       );
       const updatedItem = response.data.item;
       setChecklist((prev) =>
@@ -180,7 +180,7 @@ const CheckList = () => {
   };
   // saved
   const toggleSave = async (id) => {
-    const response = await axios.patch(`${API}/save/${id}`);
+    const response = await axios.patch(`${API}/api/save/${id}`);
     fetchData();
   };
 

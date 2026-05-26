@@ -81,7 +81,7 @@ export const FoodProvider = ({ children }) => {
 
     try {
       // BACKEND API
-      const res = await axios.get(`${API}/foods`);
+      const res = await axios.get(`${API}/api/foods`);
       // FOOD ARRAY
       const foodData = res.data.foods;
 

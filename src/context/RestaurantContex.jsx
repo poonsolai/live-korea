@@ -82,7 +82,7 @@ export const RestaurantProvider = ({ children }) => {
 
     try {
       // BACKEND API CALL
-      const res = await axios.get(`${API}/restaurant`);
+      const res = await axios.get(`${API}/api/restaurant`);
 
       // TOURIST ARRAY
       const touristData = res.data.restaurant;

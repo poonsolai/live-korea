@@ -30,7 +30,7 @@ const EmergencyPage = () => {
   const [num, setNum] = useState(5);
   // get datas in database 
   const fetchEmpPhrases = async ()=>{
-    const res = await axios.get(`${API}/emp`);
+    const res = await axios.get(`${API}/api/emp`);
     setPhrases(res.data.empphrases);
 
   }

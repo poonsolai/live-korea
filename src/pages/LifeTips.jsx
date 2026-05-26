@@ -23,7 +23,7 @@ const LifeTips = () => {
   };
 
   async function fetchTips() {
-    const res = await axios.get(`${API}/tips`);
+    const res = await axios.get(`${API}/api/tips`);
     setTipsData(res.data.tips);
     setTipsDataF(res.data.tips);
   }
@@ -36,7 +36,7 @@ const LifeTips = () => {
 
   // store a fav parses
   const toggleSave = async (item) => {
-    const res = await axios.patch(`${API}/save`, {
+    const res = await axios.patch(`${API}/api/save`, {
       id: item._id,
     });
     fetchTips();

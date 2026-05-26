@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import {
   Container,
@@ -10,9 +10,12 @@ import {
   Modal,
   Spinner,
 } from "react-bootstrap";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faEllipsisVertical, faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./css/LocationPage.css";
-
+import { Link } from "react-router-dom";
+import NewCategoryBar from "../components/NewCatagoryBar";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 const GEOAPIFY_API = "75bfeb3ae9db4d5e95d866b2087fd7e3";
 const PEXELS_API = "K4FzadQdtMN82iQB6Gz5tytulirVPi5Xq6C2jQK1JaBAxRYyMQDa85EI";
 
@@ -90,12 +93,15 @@ const categories = [
     color: "#ff9800",
   },
 ];
+const width = window.innerWidth;
+
 
 export default function LocationPage() {
+
   const [location, setLocation] = useState(null);
   const [places, setPlaces] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(
-    "catering.restaurant"
+    "catering.restaurant",
   );
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -123,7 +129,7 @@ export default function LocationPage() {
         setLocation({ lat, lon });
 
         setMapSrc(
-          `https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed`
+          `https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed`,
         );
 
         reverseGeocode(lat, lon);
@@ -133,7 +139,7 @@ export default function LocationPage() {
       (error) => {
         console.log(error);
         alert("Please allow location access");
-      }
+      },
     );
   };
 
@@ -141,11 +147,11 @@ export default function LocationPage() {
   const reverseGeocode = async (lat, lon) => {
     try {
       const res = await axios.get(
-        `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&apiKey=${GEOAPIFY_API}`
+        `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&apiKey=${GEOAPIFY_API}`,
       );
 
       setLocationName(
-        res.data.features[0]?.properties?.formatted || "Current Location"
+        res.data.features[0]?.properties?.formatted || "Current Location",
       );
     } catch (err) {
       console.log(err);
@@ -160,7 +166,7 @@ export default function LocationPage() {
       setLoading(true);
 
       const res = await axios.get(
-        `https://api.geoapify.com/v1/geocode/search?text=${search}&limit=1&apiKey=${GEOAPIFY_API}`
+        `https://api.geoapify.com/v1/geocode/search?text=${search}&limit=1&apiKey=${GEOAPIFY_API}`,
       );
 
       if (res.data.features.length === 0) {
@@ -179,7 +185,7 @@ export default function LocationPage() {
       setLocationName(result.properties.formatted);
 
       setMapSrc(
-        `https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed`
+        `https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed`,
       );
 
       fetchNearbyPlaces(lat, lon, selectedCategory);
@@ -195,12 +201,12 @@ export default function LocationPage() {
   const getPexelsImage = async (query) => {
     try {
       const response = await axios.get(
-        `https://api.pexels.com/v1/search?query=${query}&per_page=1`,
+        `https://api.pexels.com/v1/search?query=${query}&per_page=5`,
         {
           headers: {
             Authorization: PEXELS_API,
           },
-        }
+        },
       );
 
       return (
@@ -220,7 +226,7 @@ export default function LocationPage() {
       setSelectedCategory(category);
 
       const res = await axios.get(
-        `https://api.geoapify.com/v2/places?categories=${category}&filter=circle:${lon},${lat},5000&bias=proximity:${lon},${lat}&limit=30&apiKey=${GEOAPIFY_API}`
+        `https://api.geoapify.com/v2/places?categories=${category}&filter=circle:${lon},${lat},5000&bias=proximity:${lon},${lat}&limit=30&apiKey=${GEOAPIFY_API}`,
       );
 
       const data = await Promise.all(
@@ -228,7 +234,7 @@ export default function LocationPage() {
           const props = item.properties;
 
           const image = await getPexelsImage(
-            `${props.name || category} ${locationName}`
+            `${props.name || category} ${locationName}`,
           );
 
           return {
@@ -241,7 +247,7 @@ export default function LocationPage() {
             image,
             category,
           };
-        })
+        }),
       );
 
       setPlaces(data);
@@ -257,16 +263,18 @@ export default function LocationPage() {
   const openGoogleMap = (lat, lon) => {
     window.open(
       `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
-      "_blank"
+      "_blank",
     );
   };
-
+  const topSectionRef = useRef(null);
   return (
-    <Container fluid className="location-page">
+    <Container fluid className="location-page mt-5">
       {/* TOP */}
       <div className="top-section">
         <div>
-          <h2>Location</h2>
+          <h2 style={{ color: "orchid", fontSize: "50px" }} className="mb-4">
+            Location
+          </h2>
           <p>{locationName}</p>
         </div>
 
@@ -275,9 +283,19 @@ export default function LocationPage() {
           My Location
         </Button>
       </div>
+      <div className="backbtn">
+        <Link
+          className="d-flex align-items-center back-link text-secondary"
+          to="/"
+          style={{ textDecoration: "none" }}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} className="me-1" />
+          <span>Home</span>
+        </Link>
+      </div>
 
       {/* SEARCH */}
-      <div className="search-wrapper">
+      <div className="search-wrapper" ref={topSectionRef}>
         <Form.Control
           type="text"
           placeholder="Search place..."
@@ -291,12 +309,12 @@ export default function LocationPage() {
         />
 
         <Button onClick={searchPlace}>
-          <i className="fa-solid fa-search"></i>
+          <FontAwesomeIcon icon={faSearch} />
         </Button>
       </div>
 
       {/* MAP */}
-      <div className="map-wrapper">
+      <div className="map-wrapper" ref={topSectionRef}>
         <iframe
           title="Google Map"
           src={mapSrc}
@@ -320,11 +338,11 @@ export default function LocationPage() {
 
       {/* CATEGORY */}
       <div className="category-scroll">
-        {categories.slice(0, 6).map((item) => (
+        {categories.slice(0, width < 560 ? 3 : width < 900 ? 7 : 10).map((item) => (
           <div
             key={item.id}
-            className={`category-card ${
-              selectedCategory === item.id ? "active-category" : ""
+            className={`category-pill ${
+              selectedCategory === item.id ? "active-pill" : ""
             }`}
             onClick={() => {
               if (location) {
@@ -332,41 +350,36 @@ export default function LocationPage() {
               }
             }}
           >
-            <div
-              className="category-icon"
+            <i
+              className={`fa-solid ${item.icon}`}
               style={{
-                background: item.color + "20",
+                color: selectedCategory === item.id ? "white" : item.color,
               }}
-            >
-              <i
-                className={`fa-solid ${item.icon}`}
-                style={{ color: item.color }}
-              ></i>
-            </div>
+            ></i>
 
-            <h6>{item.name}</h6>
+            <span>{item.name}</span>
           </div>
         ))}
 
+        {/* MORE BUTTON */}
         <div
-          className="category-card"
+          className="category-pill more-pill"
           onClick={() => setShowModal(true)}
         >
-          <div className="category-icon">
-            <i className="fa-solid fa-ellipsis"></i>
-          </div>
-
-          <h6>More</h6>
+          <FontAwesomeIcon  icon={faEllipsisVertical}/>
         </div>
       </div>
 
+      {/* <NewCategoryBar
+        val={categoryNames}
+        setCategory={setSelectedCategory}
+        active={selectedCategory}
+      /> */}
       {/* TITLE */}
       <div className="nearby-header">
         <h4>Nearby Places</h4>
 
-        <span>
-          {places.length} Places Found
-        </span>
+        <span>{places.length} Places Found</span>
       </div>
 
       {/* LOADING */}
@@ -395,9 +408,7 @@ export default function LocationPage() {
                   <div className="card-buttons">
                     <Button
                       className="direction-btn"
-                      onClick={() =>
-                        openGoogleMap(place.lat, place.lon)
-                      }
+                      onClick={() => openGoogleMap(place.lat, place.lon)}
                     >
                       <i className="fa-solid fa-location-arrow"></i>
                       Directions
@@ -407,8 +418,11 @@ export default function LocationPage() {
                       className="view-btn"
                       onClick={() => {
                         setMapSrc(
-                          `https://maps.google.com/maps?q=${place.lat},${place.lon}&z=16&output=embed`
+                          `https://maps.google.com/maps?q=${place.lat},${place.lon}&z=16&output=embed`,
                         );
+                        topSectionRef.current?.scrollIntoView({
+                          behavior: "smooth",
+                        });
                       }}
                     >
                       <i className="fa-solid fa-map"></i>
@@ -423,11 +437,7 @@ export default function LocationPage() {
       )}
 
       {/* MODAL */}
-      <Modal
-        show={showModal}
-        centered
-        onHide={() => setShowModal(false)}
-      >
+      <Modal show={showModal} centered onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>More Categories</Modal.Title>
         </Modal.Header>
@@ -442,11 +452,7 @@ export default function LocationPage() {
                   setShowModal(false);
 
                   if (location) {
-                    fetchNearbyPlaces(
-                      location.lat,
-                      location.lon,
-                      item.id
-                    );
+                    fetchNearbyPlaces(location.lat, location.lon, item.id);
                   }
                 }}
               >
