@@ -8,7 +8,7 @@ import {
   faChevronLeft,
   faMap,
   faLocation,
-  faArrowRight,
+  faArrowRight, 
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
@@ -224,7 +224,7 @@ const Tourist = () => {
                         {" "}
                         <FontAwesomeIcon icon={faLocation} /> {item.city}
                       </p>
-                      <div className="mt-2 type-box">
+                      <div className=" type-box">
                         <span className={`type-tag type-${item.category}`}>
                           {item.category}
                         </span>
