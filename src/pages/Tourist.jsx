@@ -204,7 +204,7 @@ const Tourist = () => {
               <Loading val={"Places"} />
             ) : (
               filteredItems.slice(0, num).map((item) => (
-                <div className="col-6 col-sm-6 col-md-4 col-lg-3" key={item.id}>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={item.id}>
                   <div className="place-card">
                     <div className="img-container">
                       <img src={item.image} alt={item.name} />
